@@ -75,7 +75,6 @@ export default function Login() {
           <button type="button" onClick={() => fillDemo("consumer@k2c.com", "consumer123")} className="text-left hover:text-brand-600">👤 Consumer: consumer@k2c.com / consumer123</button>
           <button type="button" onClick={() => fillDemo("farmer@k2c.com", "farmer123")} className="text-left hover:text-brand-600">🌾 Farmer: farmer@k2c.com / farmer123</button>
           <button type="button" onClick={() => fillDemo("agent@k2c.com", "agent123")} className="text-left hover:text-brand-600">🚚 Agent: agent@k2c.com / agent123</button>
-          <button type="button" onClick={() => fillDemo("chkramesh202021@gmail.com", "Ramesh@6777")} className="text-left hover:text-brand-600">🛠️ Admin: chkramesh202021@gmail.com</button>
         </div>
       </div>
     </div>

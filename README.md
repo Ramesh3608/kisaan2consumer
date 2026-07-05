@@ -111,7 +111,7 @@ App will run at `http://localhost:5173`.
 
 | Role      | Email                          | Password    |
 |-----------|---------------------------------|-------------|
-| Admin     | chkramesh202021@gmail.com      | Ramesh@6777 |
+| Admin     | *(your own — set via `ADMIN_EMAIL` / `ADMIN_PASSWORD` in `.env`)* | *(set by you, not stored here)* |
 | Farmer    | farmer@k2c.com                 | farmer123   |
 | Farmer 2  | farmer2@k2c.com      | farmer123   |
 | Consumer  | consumer@k2c.com     | consumer123 |
@@ -270,3 +270,7 @@ by default to keep the two apps fully independent (useful for separate deploymen
 ---
 
 Built as a working implementation of the Kisaan2Consumer SRM major project.
+
+
+
+

@@ -13,14 +13,23 @@ const run = async () => {
   await Promise.all([User.deleteMany({}), Product.deleteMany({}), Order.deleteMany({})]);
 
   console.log("Creating demo users...");
-  const admin = await User.create({
-    name: "ramesh",
-    email: "chkramesh202021@gmail.com",
-    phone: "7207298919",
-    password: "Ramesh@6777",
-    role: "admin",
-    isVerified: true,
-  });
+ // Admin credentials come from environment variables so your real details
+// never appear in source code / GitHub. Set ADMIN_NAME, ADMIN_EMAIL,
+// ADMIN_PHONE, ADMIN_PASSWORD in your local .env (which is gitignored).
+// If ADMIN_PASSWORD isn't set, a random one is generated and printed once
+// below — no predictable fallback password is ever hardcoded in this file.
+const crypto = require("crypto");
+const generatedPassword = crypto.randomBytes(9).toString("base64").replace(/[+/=]/g, "x");
+const adminPasswordUsed = process.env.ADMIN_PASSWORD || generatedPassword;
+
+const admin = await User.create({
+  name: process.env.ADMIN_NAME || "Admin User",
+  email: process.env.ADMIN_EMAIL || "admin@k2c.com",
+  phone: process.env.ADMIN_PHONE || "9000000000",
+  password: adminPasswordUsed,
+  role: "admin",
+  isVerified: true,
+});
 
   const farmer1 = await User.create({
     name: "Ramesh Kumar",
@@ -185,7 +194,7 @@ const run = async () => {
 
   console.log("✅ Seed complete!\n");
   console.log("Demo login credentials:");
-  console.log("  Admin:    chkramesh202021@gmail.com / Ramesh@6777");
+  console.log("  Admin:    " + admin.email + (process.env.ADMIN_PASSWORD ? " / (your ADMIN_PASSWORD)" : ` / ${generatedPassword}  ⚠️ copy this now, it won't be shown again`));
   console.log("  Farmer:   farmer@k2c.com / farmer123");
   console.log("  Farmer2:  farmer2@k2c.com / farmer123");
   console.log("  Consumer: consumer@k2c.com / consumer123");

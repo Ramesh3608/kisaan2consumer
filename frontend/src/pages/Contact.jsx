@@ -16,9 +16,9 @@ export default function Contact() {
         </form>
       )}
       <div className="mt-8 text-sm text-gray-500 space-y-1">
-        <p>📍 SRM Institute of Science and Technology, Kattankulathur</p>
-        <p>📞 +91 90596 85340</p>
-        <p>✉️ contact@farmfresh.com</p>
+        <p>📍 Guntur, Andhra Pradesh</p>
+        <p>📞 +91 7386837381</p>
+        <p>✉️ freshfarm720@gmail.com</p>
       </div>
     </div>
   );

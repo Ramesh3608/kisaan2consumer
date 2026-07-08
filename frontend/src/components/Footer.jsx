@@ -29,9 +29,9 @@ export default function Footer() {
         <div>
           <h5 className="text-white font-semibold mb-2">Contact Us</h5>
           <ul className="text-sm space-y-1 text-gray-400">
-            <li>📍 Kattankulathur, Tamil Nadu</li>
-            <li>📞 +91 90596 85340</li>
-            <li>✉️ contact@farmfresh.com</li>
+            <li>📍 Guntur, Andhra Pradesh</li>
+            <li>📞 +91 7386837381</li>
+            <li>✉️ freshfarm720@gmail.com</li>
           </ul>
         </div>
       </div>
